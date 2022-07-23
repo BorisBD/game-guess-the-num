@@ -79,13 +79,13 @@ class PcGuessViewController: UIViewController {
                 }
         numShowLabel.isHidden = true
         if round < 10 {
-           message = "Вы заработали \(score) золота, компьютер \(1000 - (round * 100)), он угадал ваше число за \(round) раз."
+           message = "You earned \(score) gold coins, computer \(1000 - (round * 100)), he guessed you number in \(round) round(s)."
         } else {
-            message = "Вы заработали \(score) золота, компьютер проиграл, он превысил число попыток на  \(round - 10)"
+            message = "You earned\(score) gold coins, computer have lost the match, exceeded the number of attempts."
         }
         let alert = UIAlertController(
-        title: "Игра окончена", message: message, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ясно", style: .default, handler: nil))
+        title: "Game over", message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
           
         }

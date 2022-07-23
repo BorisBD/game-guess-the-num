@@ -58,13 +58,13 @@ class YourGuessViewController: UIViewController {
         if randomNum > Int(slider.value) {
             score -= 100
             round += 1
-            infoLabel.text = "Искомое число больше вашего"
+            infoLabel.text = "The number is greater than yours."
            
             
         } else if randomNum < Int(slider.value) {
             score -= 100
             round += 1
-            infoLabel.text = "Искомое число меньше вашего"
+            infoLabel.text = "The number is less than yours."
             
             
             
@@ -77,16 +77,16 @@ class YourGuessViewController: UIViewController {
             if round < 10 {
             
             let alert = UIAlertController(
-            title: "Игра окончена",
-            message: "Вы заработали \(score) золота из 1000, за \(round) раз.",
+            title: "Game over",
+            message: "You earned \(score) gold coins from 1000, in \(round) round(s).",
             preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ясно", style:
+            alert.addAction(UIAlertAction(title: "OK", style:
            .default, handler: nil))
             present(alert, animated: true, completion: nil)
             } else {
                 let alert = UIAlertController(
-                title: "Игра окончена",
-                message: "Вы проиграли, игра заняла \(round) попыток.",
+                title: "Game over",
+                message: "You lost, you exceeded the number of attempts.",
                 preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ясно", style:
                .default, handler: nil))
